@@ -48,18 +48,18 @@ class App_REST_mtd(RESTmtds):
             obj = json.loads(response.text)
             data_json = json.dumps(obj)
             if response.status_code == status_code:
-                print "REST get for "+comments+" is success!"+" with status code: "+str(response.status_code)+\
+                print("REST get for "+comments+" is success!"+" with status code: "+str(response.status_code)+\
                       " as expected \n Endpoint: "+endpoint
                 return data_json
             else:
-                print "REST get failed for "+comments+" with status code %d",response.status_code
+                print("REST get failed for "+comments+" with status code %d",response.status_code)
                 return data_json
         except Exception as e:
-            print e
+            print(e
             return e.message
         finally:
             del restObj
-            print "----------------------------------"
+            print("----------------------------------")
 
     def validate_post_response(self, endpoint, status_code,comments, **data):
         """
@@ -70,24 +70,24 @@ class App_REST_mtd(RESTmtds):
         :return:
         """
         try:
-            print "----------------------------------"
+            print("----------------------------------")
             restObj = RESTmtds(endpoint,**data)
             response = restObj.post_mtd()
             obj = json.loads(response.text)
             data_json = json.dumps(obj)
             if response.status_code == status_code:
-                print "REST post for "+comments+" is success!"+" with status code: "+str(response.status_code)+\
+                print("REST post for "+comments+" is success!"+" with status code: "+str(response.status_code)+\
                       " as expected \n Endpoint: "+endpoint
                 return data_json
             else:
-                print "REST post failed for "+comments+" with status code %d",response.status_code
+                print("REST post failed for "+comments+" with status code %d",response.status_code
                 return data_json
         except Exception as e:
-            print e
+            print(e
             return e.message
         finally:
             del restObj
-            print "----------------------------------"
+            print("----------------------------------"
 
     def validate_put_response(self, endpoint, status_code,comments, **data):
         """
@@ -98,24 +98,24 @@ class App_REST_mtd(RESTmtds):
         :return:
         """
         try:
-            print "----------------------------------"
+            print("----------------------------------")
             restObj = RESTmtds(endpoint,**data)
             response = restObj.put_mtd()
             obj = json.loads(response.text)
             data_json = json.dumps(obj)
             if response.status_code == status_code:
-                print "REST put for "+comments+" is success!"+" with status code: "+str(response.status_code)+\
+                print("REST put for "+comments+" is success!"+" with status code: "+str(response.status_code)+\
                       " as expected \n Endpoint: "+endpoint
                 return data_json
             else:
-                print "REST put failed for "+comments+" with status code %d",response.status_code
+                print("REST put failed for "+comments+" with status code %d",response.status_code
                 return data_json
         except Exception as e:
-            print e
+            print(e
             return e.message
         finally:
             del restObj
-            print "----------------------------------"
+            print("----------------------------------")
 
     def validate_patch_response(self, endpoint, status_code,comments, **data):
         """
@@ -126,24 +126,24 @@ class App_REST_mtd(RESTmtds):
         :return:
         """
         try:
-            print "----------------------------------"
+            print("----------------------------------")
             restObj = RESTmtds(endpoint,**data)
             response = restObj.patch_mtd()
             obj = json.loads(response.text)
             data_json = json.dumps(obj)
             if response.status_code == status_code:
-                print "REST patch for "+comments+" is success!"+" with status code: "+str(response.status_code)+\
+                print("REST patch for "+comments+" is success!"+" with status code: "+str(response.status_code)+\
                       " as expected \n Endpoint: "+endpoint
                 return data_json
             else:
-                print "REST patch failed for "+comments+" with status code %d",response.status_code
+                print("REST patch failed for "+comments+" with status code %d",response.status_code
                 return data_json
         except Exception as e:
-            print e
+            print(e
             return e.message
         finally:
             del restObj
-            print "----------------------------------"
+            print("----------------------------------"
 
     def validate_delete_response(self, endpoint, status_code,comments):
         """
@@ -154,22 +154,22 @@ class App_REST_mtd(RESTmtds):
         :return:
         """
         try:
-            print "----------------------------------"
+            print("----------------------------------")
             restObj = RESTmtds(endpoint)
             response = restObj.delete_mthd()
             if response.status_code == status_code:
-                print "REST delete for "+comments+" is success!"+" with status code: "+str(response.status_code)+\
+                print("REST delete for "+comments+" is success!"+" with status code: "+str(response.status_code)+\
                       " as expected \n Endpoint: "+endpoint
                 return True
             else:
-                print "REST delete failed for "+comments+" with status code %d",response.status_code
+                print("REST delete failed for "+comments+" with status code %d",response.status_code
                 return False
         except Exception as e:
-            print e
+            print(e
             return e.message
         finally:
             del restObj
-            print "----------------------------------"
+            print("----------------------------------")
 
 
     def get_list_users_details(self):
