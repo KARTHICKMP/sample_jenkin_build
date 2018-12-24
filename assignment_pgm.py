@@ -42,7 +42,7 @@ class App_REST_mtd(RESTmtds):
         :return:
         """
         try:
-            print "----------------------------------"
+            print("----------------------------------")
             restObj = RESTmtds(endpoint)
             response = restObj.get_mthd()
             obj = json.loads(response.text)
